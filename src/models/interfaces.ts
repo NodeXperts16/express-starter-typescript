@@ -7,6 +7,6 @@ export interface IUser extends Document {
 }
 
 export interface IUserModel extends Model<IUser> {
-  get: () => Promise<IUser[]>;
+  get: (search: string) => Promise<IUser[]>;
   add: (name: string) => Promise<IUser>;
 }
